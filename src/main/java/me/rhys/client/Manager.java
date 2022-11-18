@@ -39,7 +39,7 @@ public class Manager {
     @EventTarget
     public void initialize(InitializeEvent event) {
         event.setName("Aspirion");
-        event.setVersion("1.0");
+        event.setVersion("1.1");
     }
 
     @EventTarget
