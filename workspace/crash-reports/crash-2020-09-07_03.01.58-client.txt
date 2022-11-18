@@ -1,0 +1,76 @@
+---- Minecraft Crash Report ----
+// I bet Cylons wouldn't have this problem.
+
+Time: 07/09/20 03:01
+Description: Initializing game
+
+java.lang.ClassCastException: com.google.gson.JsonArray cannot be cast to com.google.gson.JsonObject
+	at me.rhys.client.files.SettingsFile.load(SettingsFile.java:45)
+	at me.rhys.base.file.FileFactory.lambda$load$1(FileFactory.java:42)
+	at java.util.concurrent.CopyOnWriteArrayList.forEach(CopyOnWriteArrayList.java:891)
+	at me.rhys.base.util.container.Container.forEach(Container.java:94)
+	at me.rhys.base.file.FileFactory.load(FileFactory.java:42)
+	at me.rhys.base.Lite.initialize(Iron.java:73)
+	at net.minecraft.client.Minecraft.startGame(Minecraft.java:505)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:366)
+	at net.minecraft.client.main.Main.main(Main.java:113)
+	at net.minecraft.Start.main(Start.java:9)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at me.rhys.client.files.SettingsFile.load(SettingsFile.java:45)
+	at me.rhys.base.file.FileFactory.lambda$load$1(FileFactory.java:42)
+	at java.util.concurrent.CopyOnWriteArrayList.forEach(CopyOnWriteArrayList.java:891)
+	at me.rhys.base.util.container.Container.forEach(Container.java:94)
+	at me.rhys.base.file.FileFactory.load(FileFactory.java:42)
+	at me.rhys.base.Lite.initialize(Iron.java:73)
+	at net.minecraft.client.Minecraft.startGame(Minecraft.java:505)
+
+-- Initialization --
+Details:
+Stacktrace:
+	at net.minecraft.client.Minecraft.run(Minecraft.java:366)
+	at net.minecraft.client.main.Main.main(Main.java:113)
+	at net.minecraft.Start.main(Start.java:9)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.8.8
+	Operating System: Windows 10 (amd64) version 10.0
+	CPU: 8x AMD Ryzen 5 1500X Quad-Core Processor 
+	Java Version: 1.8.0_241, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 169112808 bytes (161 MB) / 419954688 bytes (400 MB) up to 3804758016 bytes (3628 MB)
+	JVM Flags: 0 total; 
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	Launched Version: mcp
+	LWJGL: 2.9.4
+	OpenGL: GeForce GTX 1060 6GB/PCIe/SSE2 GL version 4.6.0 NVIDIA 445.87, NVIDIA Corporation
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: No
+	Is Modded: Very likely; Jar signature invalidated
+	Type: Client (map_client.txt)
+	Resource Packs: 
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	CPU: 8x AMD Ryzen 5 1500X Quad-Core Processor 
+	OptiFine Version: OptiFine_1.8.8_HD_U_H8
+	Render Distance Chunks: 8
+	Mipmaps: 4
+	Anisotropic Filtering: 1
+	Antialiasing: 0
+	Multitexture: false
+	Shaders: null
+	OpenGlVersion: 4.6.0 NVIDIA 445.87
+	OpenGlRenderer: GeForce GTX 1060 6GB/PCIe/SSE2
+	OpenGlVendor: NVIDIA Corporation
+	CpuCount: 8

@@ -1,0 +1,104 @@
+---- Minecraft Crash Report ----
+// Uh... Did I do that?
+
+Time: 9/6/20 11:34 PM
+Description: Updating screen events
+
+java.lang.ArrayIndexOutOfBoundsException: 0
+	at me.rhys.base.ui.element.button.DropDownButton.<init>(DropDownButton.java:23)
+	at ModeDropDown.<init>(ModeDropDown.java:14)
+	at ClickUI.addSettings(ClickUI.java:239)
+	at ClickUI.lambda$clickMouse$8(ClickUI.java:317)
+	at java.util.Optional.ifPresent(Optional.java:159)
+	at ClickUI.clickMouse(ClickUI.java:311)
+	at me.rhys.base.ui.UIScreen.mouseClicked(UIScreen.java:52)
+	at net.minecraft.client.gui.GuiScreen.handleMouseInput(GuiScreen.java:599)
+	at net.minecraft.client.gui.GuiScreen.handleInput(GuiScreen.java:568)
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1494)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:942)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:379)
+	at net.minecraft.client.main.Main.main(Main.java:113)
+	at net.minecraft.Start.main(Start.java:9)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at me.rhys.base.ui.element.button.DropDownButton.<init>(DropDownButton.java:23)
+	at ModeDropDown.<init>(ModeDropDown.java:14)
+	at ClickUI.addSettings(ClickUI.java:239)
+	at ClickUI.lambda$clickMouse$8(ClickUI.java:317)
+	at java.util.Optional.ifPresent(Optional.java:159)
+	at ClickUI.clickMouse(ClickUI.java:311)
+	at me.rhys.base.ui.UIScreen.mouseClicked(UIScreen.java:52)
+	at net.minecraft.client.gui.GuiScreen.handleMouseInput(GuiScreen.java:599)
+	at net.minecraft.client.gui.GuiScreen.handleInput(GuiScreen.java:568)
+
+-- Affected screen --
+Details:
+	Screen name: ClickUI
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityPlayerSP['Player15'/262, l='MpServer', x=266.85, y=71.00, z=182.07]]
+	Chunk stats: MultiplayerChunkCache: 289, 289
+	Level seed: 0
+	Level generator: ID 00 - default, ver 1. Features enabled: false
+	Level generator options: 
+	Level spawn location: -36.00,64.00,224.00 - World: (-36,64,224), Chunk: (at 12,4,0 in -3,14; contains blocks -48,0,224 to -33,255,239), Region: (-1,0; contains chunks -32,0 to -1,31, blocks -512,0,0 to -1,255,511)
+	Level time: 420927 game time, 22489 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: false
+	Forced entities: 38 total; [EntityRabbit['Rabbit'/384, l='MpServer', x=342.28, y=64.00, z=254.50], EntitySheep['Sheep'/388, l='MpServer', x=346.44, y=64.00, z=258.34], EntityRabbit['Rabbit'/340, l='MpServer', x=301.41, y=70.00, z=107.66], EntityRabbit['Rabbit'/341, l='MpServer', x=295.97, y=72.28, z=148.13], EntityZombie['Zombie'/342, l='MpServer', x=289.69, y=66.13, z=169.25], EntityRabbit['Rabbit'/343, l='MpServer', x=300.22, y=70.28, z=224.78], EntityBat['Bat'/279, l='MpServer', x=204.41, y=36.03, z=144.41], EntityRabbit['Rabbit'/344, l='MpServer', x=301.50, y=62.00, z=248.88], EntityRabbit['Rabbit'/280, l='MpServer', x=198.19, y=64.00, z=253.19], EntityRabbit['Rabbit'/345, l='MpServer', x=300.75, y=66.00, z=240.34], EntityRabbit['Rabbit'/281, l='MpServer', x=194.31, y=64.00, z=254.56], EntityRabbit['Rabbit'/346, l='MpServer', x=291.50, y=68.00, z=262.59], EntityRabbit['Rabbit'/282, l='MpServer', x=192.50, y=63.00, z=257.50], EntitySheep['Sheep'/285, l='MpServer', x=218.34, y=71.00, z=104.97], EntityPig['Pig'/352, l='MpServer', x=317.91, y=71.00, z=119.78], EntityPig['Pig'/353, l='MpServer', x=308.47, y=70.00, z=113.22], EntityPig['Pig'/354, l='MpServer', x=315.53, y=71.00, z=116.38], EntityRabbit['Rabbit'/355, l='MpServer', x=311.44, y=72.00, z=134.63], EntityRabbit['Rabbit'/356, l='MpServer', x=309.88, y=72.00, z=133.47], EntityRabbit['Rabbit'/295, l='MpServer', x=229.97, y=72.19, z=151.06], EntityRabbit['Rabbit'/296, l='MpServer', x=234.53, y=73.00, z=184.13], EntityRabbit['Rabbit'/297, l='MpServer', x=229.72, y=77.00, z=196.97], EntitySheep['Sheep'/302, l='MpServer', x=245.50, y=70.00, z=114.78], EntitySheep['Sheep'/303, l='MpServer', x=251.97, y=69.00, z=114.00], EntityPlayerSP['Player15'/262, l='MpServer', x=266.85, y=71.00, z=182.07], EntityRabbit['Rabbit'/304, l='MpServer', x=239.01, y=76.14, z=200.41], EntityRabbit['Rabbit'/305, l='MpServer', x=244.75, y=70.00, z=207.50], EntitySheep['Sheep'/369, l='MpServer', x=330.31, y=76.00, z=107.53], EntityPig['Pig'/371, l='MpServer', x=320.72, y=72.00, z=113.47], EntityRabbit['Rabbit'/372, l='MpServer', x=322.09, y=71.00, z=137.28], EntityRabbit['Rabbit'/373, l='MpServer', x=322.69, y=72.00, z=128.13], EntityRabbit['Rabbit'/374, l='MpServer', x=321.25, y=73.00, z=128.72], EntityRabbit['Rabbit'/375, l='MpServer', x=327.97, y=69.00, z=145.19], EntityRabbit['Rabbit'/376, l='MpServer', x=322.38, y=68.00, z=145.78], EntitySheep['Sheep'/377, l='MpServer', x=331.66, y=64.00, z=243.00], EntityRabbit['Rabbit'/379, l='MpServer', x=345.50, y=75.00, z=107.28], EntityRabbit['Rabbit'/382, l='MpServer', x=336.50, y=61.00, z=234.50], EntityRabbit['Rabbit'/383, l='MpServer', x=337.31, y=63.00, z=232.34]]
+	Retry entities: 0 total; []
+	Server brand: vanilla
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:401)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2256)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:392)
+	at net.minecraft.client.main.Main.main(Main.java:113)
+	at net.minecraft.Start.main(Start.java:9)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.8.8
+	Operating System: Windows 10 (amd64) version 10.0
+	CPU: 4x Intel(R) Core(TM) i5-7400 CPU @ 3.00GHz
+	Java Version: 1.8.0_252, AdoptOpenJDK
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), AdoptOpenJDK
+	Memory: 381589816 bytes (363 MB) / 625475584 bytes (596 MB) up to 1895825408 bytes (1808 MB)
+	JVM Flags: 0 total; 
+	IntCache: cache: 0, tcache: 0, allocated: 13, tallocated: 95
+	Launched Version: mcp
+	LWJGL: 2.9.4
+	OpenGL: GeForce GTX 1050 Ti/PCIe/SSE2 GL version 4.6.0 NVIDIA 451.48, NVIDIA Corporation
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: No
+	Is Modded: Very likely; Jar signature invalidated
+	Type: Client (map_client.txt)
+	Resource Packs: 
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	CPU: 4x Intel(R) Core(TM) i5-7400 CPU @ 3.00GHz
+	OptiFine Version: OptiFine_1.8.8_HD_U_H8
+	Render Distance Chunks: 8
+	Mipmaps: 4
+	Anisotropic Filtering: 1
+	Antialiasing: 0
+	Multitexture: false
+	Shaders: null
+	OpenGlVersion: 4.6.0 NVIDIA 451.48
+	OpenGlRenderer: GeForce GTX 1050 Ti/PCIe/SSE2
+	OpenGlVendor: NVIDIA Corporation
+	CpuCount: 4
