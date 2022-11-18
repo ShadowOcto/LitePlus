@@ -14,6 +14,7 @@ import me.rhys.client.module.combat.criticals.Criticals;
 import me.rhys.client.module.combat.velocity.Velocity;
 import me.rhys.client.module.ghost.Reach;
 import me.rhys.client.module.ghost.autoclicker.AutoClicker;
+import me.rhys.client.module.longjump.Longjump;
 import me.rhys.client.module.movement.CustomSpeed;
 import me.rhys.client.module.movement.Sprint;
 import me.rhys.client.module.movement.fly.Fly;
@@ -69,6 +70,7 @@ public class Manager {
 
                 new Sprint("Sprint", "Sprints for you", Category.MOVEMENT, Keyboard.KEY_NONE),
                 new Fly("Fly", "Fly like a faggot", Category.MOVEMENT, Keyboard.KEY_NONE),
+                new Longjump("Longjump", "Jump long lol", Category.MOVEMENT, Keyboard.KEY_NONE),
                 new Speed("Speed", "move at un-legit speeds", Category.MOVEMENT, Keyboard.KEY_NONE),
                 new NoSlow("NoSlow", "Removes slowdown from items / blocks", Category.MOVEMENT, Keyboard.KEY_NONE),
                 new Step("Step", "Steps up blocks", Category.MOVEMENT, Keyboard.KEY_NONE),
