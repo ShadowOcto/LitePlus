@@ -183,7 +183,7 @@ public class HUD extends Module {
             switch (wm) {
                 case TEXT:
                     FontUtil.drawStringWithShadow(Lite.MANIFEST.getName() + EnumChatFormatting.GRAY + " v" + Lite.MANIFEST.getVersion(), new Vec2f(4, 5), this.getColor(0, 1));
-                    FontUtil.drawStringWithShadow(EnumChatFormatting.WHITE + "Lite", new Vec2f(4, 5), this.getColor(0, 1));
+                    FontUtil.drawStringWithShadow(EnumChatFormatting.WHITE + "Aspirion", new Vec2f(4, 5), this.getColor(0, 1));
                     break;
                 case IMAGE:
                     RenderUtil.drawImage(new ResourceLocation("Lite/Logo.png"), new Vec2f(4, 5), 70, 24);

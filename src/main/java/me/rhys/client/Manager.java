@@ -38,7 +38,7 @@ public class Manager {
 
     @EventTarget
     public void initialize(InitializeEvent event) {
-        event.setName("Lite+");
+        event.setName("Aspirion");
         event.setVersion("1.0");
     }
 
